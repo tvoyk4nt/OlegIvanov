@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Безопасные заметки</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Мои заметки</h1>
+    <p class="hint">Текст заметок отображается как обычный текст.</p>
+    <form id="note-form">
+      <input id="note-title" type="text" placeholder="Название заметки" maxlength="60" required>
+      <textarea id="note-text" placeholder="Текст заметки" maxlength="500" required></textarea>
+      <button type="submit">Добавить</button>
+    </form>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Поиск по заметкам">
+      <button id="clear" type="button">Очистить все</button>
+    </div>
+    <p id="message" aria-live="polite"></p>
+    <ul id="notes"></ul>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
