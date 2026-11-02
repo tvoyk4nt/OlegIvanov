@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #eef1f4; color: #222; font-family: Arial, sans-serif; }
+.container { max-width: 720px; margin: 36px auto; padding: 24px; background: #fff; border-radius: 12px; }
+h1 { margin-top: 0; }
+.hint { color: #555; }
+form { display: grid; gap: 10px; margin-bottom: 16px; }
+input, textarea, button { padding: 10px; border: 1px solid #bbb; border-radius: 6px; font: inherit; }
+textarea { min-height: 100px; resize: vertical; }
+button { background: #285f9e; color: white; border: 0; cursor: pointer; }
+button:hover { background: #1d4777; }
+.toolbar { display: flex; gap: 8px; flex-wrap: wrap; }
+.toolbar input { flex: 1; min-width: 150px; }
+#message { min-height: 22px; color: #a22; }
+#notes { list-style: none; padding: 0; }
+.note { border: 1px solid #ddd; border-radius: 8px; padding: 12px; margin-top: 10px; }
+.note h2 { font-size: 18px; margin: 0 0 8px; overflow-wrap: anywhere; }
+.note p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.note button { padding: 7px 9px; }
+@media (max-width: 520px) { .container { margin: 12px; padding: 16px; } }
