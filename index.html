@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карточка заказа</title>
+</head>
+<body>
+  <h1>Карточка заказа</h1>
+  <section>
+    <p>Товар: <strong id="product-name">Wireless mouse</strong></p>
+    <label>Цена за единицу, руб.
+      <input id="unit-price" type="number" value="2500" step="0.01">
+    </label>
+    <br>
+    <label>Количество
+      <input id="quantity" type="number" value="3" step="1">
+    </label>
+    <br>
+    <label>Скидка, %
+      <input id="discount" type="number" value="10" step="1">
+    </label>
+    <br>
+    <button id="calculate">Рассчитать</button>
+    <p id="result">Результат появится после расчёта.</p>
+    <p id="message"></p>
+  </section>
+  <script src="./dist/main.js" defer></script>
+</body>
+</html>
