@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя книжная полка</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <div>
+                <p class="eyebrow">JS-04 · ES-модули</p>
+                <h1>Моя книжная полка</h1>
+                <p class="subtitle">Список книг, которые хочу прочитать или уже прочитал.</p>
+            </div>
+            <div class="counter" id="book-count">Книг: 0</div>
+        </header>
+
+        <section class="panel">
+            <h2>Добавить книгу</h2>
+            <form id="book-form">
+                <div class="form-grid">
+                    <label>Название
+                        <input id="title" name="title" type="text" maxlength="100" placeholder="Например, Дюна" required>
+                    </label>
+                    <label>Автор
+                        <input id="author" name="author" type="text" maxlength="80" placeholder="Фрэнк Герберт" required>
+                    </label>
+                    <label>Год издания
+                        <input id="year" name="year" type="number" min="0" max="2100" placeholder="1965">
+                    </label>
+                </div>
+                <button type="submit">Добавить книгу</button>
+                <p class="form-message" id="form-message" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="toolbar">
+            <label class="search-label">Поиск
+                <input id="search" type="search" placeholder="Название или автор">
+            </label>
+            <label>Показать
+                <select id="filter">
+                    <option value="all">Все книги</option>
+                    <option value="unread">Хочу прочитать</option>
+                    <option value="read">Прочитано</option>
+                </select>
+            </label>
+            <label>Сортировка
+                <select id="sort">
+                    <option value="title">По названию</option>
+                    <option value="author">По автору</option>
+                    <option value="year">По году</option>
+                </select>
+            </label>
+        </section>
+
+        <section class="panel">
+            <div class="list-heading">
+                <h2>Мои книги</h2>
+                <button id="clear-read" class="secondary" type="button">Удалить прочитанные</button>
+            </div>
+            <p id="status" class="status" aria-live="polite"></p>
+            <ul id="book-list" class="book-list"></ul>
+        </section>
+        <footer>Данные сохраняются в localStorage этого браузера.</footer>
+    </main>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
