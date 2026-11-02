@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя коллекция игр</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Моя коллекция игр</h1>
+    <form id="game-form">
+      <input id="title" type="text" placeholder="Название игры" maxlength="60" required>
+      <input id="genre" type="text" placeholder="Жанр" maxlength="30" required>
+      <select id="status">
+        <option value="В планах">В планах</option>
+        <option value="Играю">Играю</option>
+        <option value="Пройдена">Пройдена</option>
+      </select>
+      <button type="submit">Добавить игру</button>
+    </form>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Поиск по названию">
+      <select id="filter">
+        <option value="all">Все игры</option>
+        <option value="В планах">В планах</option>
+        <option value="Играю">Играю</option>
+        <option value="Пройдена">Пройдена</option>
+      </select>
+    </div>
+    <p id="message" aria-live="polite"></p>
+    <ul id="game-list"></ul>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
