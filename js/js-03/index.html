@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск книг — JS-03</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <p class="eyebrow">JS-03 · FETCH API</p>
+            <h1>Поиск книг</h1>
+            <p class="description">Найди книги в открытом каталоге Open Library.</p>
+        </header>
+
+        <section class="search-panel">
+            <form id="search-form">
+                <label for="search-input">Название книги или автор</label>
+                <div class="search-row">
+                    <input id="search-input" type="search" placeholder="Например, The Hobbit" required>
+                    <button type="submit" id="search-button">Найти</button>
+                </div>
+            </form>
+        </section>
+
+        <div class="results-heading">
+            <h2>Результаты</h2>
+            <button type="button" id="reload-button" class="secondary">Повторить запрос</button>
+        </div>
+        <p id="status" class="status" role="status">Введите запрос и нажмите «Найти».</p>
+        <section id="results" class="results" aria-live="polite"></section>
+    </main>
+</body>
+</html>
