@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f1f3f5; color: #222; }
+.container { max-width: 760px; margin: 40px auto; padding: 24px; background: white; border-radius: 12px; }
+h1 { margin-top: 0; }
+form, .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+input, select, button { padding: 10px; border: 1px solid #bbb; border-radius: 6px; font: inherit; }
+input { flex: 1; min-width: 140px; }
+button { background: #285f9e; color: white; border: 0; cursor: pointer; }
+button:hover { background: #1d4777; }
+#message { min-height: 22px; color: #a22; }
+#game-list { list-style: none; padding: 0; }
+.game { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 8px; }
+.game-info { overflow-wrap: anywhere; }
+.game-info strong { display: block; }
+.game-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.game-actions button { padding: 7px 9px; }
+@media (max-width: 520px) { .container { margin: 12px; padding: 16px; } .game { align-items: flex-start; flex-direction: column; } }
