@@ -1,0 +1,4 @@
+export function createBook(title, author, year) { return { id: Date.now() + Math.random(), title: title.trim(), author: author.trim(), year: year ? Number(year) : null, read: false }; }
+export function filterBooks(books, query, filter) { const text = query.trim().toLowerCase(); return books.filter(book => { const matchesText = book.title.toLowerCase().includes(text) || book.author.toLowerCase().includes(text); const matchesStatus = filter === "all" || (filter === "read" && book.read) || (filter === "unread" && !book.read); return matchesText && matchesStatus; }); }
+export function sortBooks(books, sortBy) { return [...books].sort((a, b) => sortBy === "year" ? (a.year || 0) - (b.year || 0) : a[sortBy].localeCompare(b[sortBy], "ru")); }
+export const STORAGE_KEY = "js04-books";
