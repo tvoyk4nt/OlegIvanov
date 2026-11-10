@@ -8,5 +8,5 @@
     "rootDir": "src",
     "skipLibCheck": true
   },
-  "include": ["src/main.ts", "src/catalog.ts", "src/ts03-catalog.ts", "src/orders.ts"]
+  "include": ["src/main.ts", "src/catalog.ts", "src/ts03-catalog.ts", "src/orders.ts", "src/ts05-unions.ts"]
 }
